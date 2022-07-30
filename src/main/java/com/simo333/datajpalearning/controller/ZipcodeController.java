@@ -21,6 +21,7 @@ public class ZipcodeController {
         this.zipcodeRepository = zipcodeRepository;
     }
 
+    /* TODO fix: org.hibernate.PersistentObjectException: detached entity passed to persist: com.simo333.datajpalearning.model.City */
     @PostMapping
     public ResponseEntity<Zipcode> addZipcode(@RequestBody Zipcode zipcode) {
         Zipcode addedZipcode = zipcodeRepository.save(zipcode);
